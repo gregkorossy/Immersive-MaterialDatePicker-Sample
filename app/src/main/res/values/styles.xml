@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- you can use ?attr/colorSurface to remove any blinking happening during re-creation of the dialog -->
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+
+        <!-- or use translucent navigation bars -->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+
+        <item name="android:immersive">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="MyCalendar.Fullscreen" parent="ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <!-- you can use ?attr/colorSurface to remove any blinking happening during re-creation of the dialog -->
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+
+        <!-- or use translucent navigation bars -->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+
+        <item name="android:immersive">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+</resources>
