@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ImmersiveDatePicker</string>
+    <string name="button_normal_dialog">Normal dialog</string>
+    <string name="button_fullscreen_dialog">Fullscreen dialog</string>
 </resources>

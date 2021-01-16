@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -20,8 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         registerDatePickerFragmentCallbacks()
 
-        binding.button.setOnClickListener {
-            openMaterialDialog()
+        binding.buttonNormal.setOnClickListener {
+            openMaterialDialog(R.style.MyCalendar)
+        }
+
+        binding.buttonFullscreen.setOnClickListener {
+            openMaterialDialog(R.style.MyCalendar_Fullscreen)
         }
     }
 
@@ -100,12 +105,12 @@ class MainActivity : AppCompatActivity() {
         }, false)
     }
 
-    private fun openMaterialDialog() {
+    private fun openMaterialDialog(@StyleRes themeRes: Int) {
         val datePickerBuilder = MaterialDatePicker.Builder.dateRangePicker()
 
         datePickerBuilder.apply {
             setTitleText("Select a date")
-            setTheme(R.style.MyCalendar_Fullscreen)
+            setTheme(themeRes)
         }
 
         val dp = datePickerBuilder.build()
